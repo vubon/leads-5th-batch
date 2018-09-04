@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 ]
 
 THIRD_PARTY_APPS =[
-
+    'rest_framework'
 ]
 
 LOCAL_APPS = [
@@ -48,8 +48,6 @@ LOCAL_APPS = [
 ]
 
 INSTALLED_APPS += THIRD_PARTY_APPS + LOCAL_APPS
-
-
 
 
 MIDDLEWARE = [
@@ -97,6 +95,16 @@ DATABASES = {
     }
 }
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        #'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -122,13 +130,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Dhaka'
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)

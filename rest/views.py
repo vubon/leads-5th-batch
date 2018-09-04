@@ -3,6 +3,9 @@ from django.shortcuts import render
 from django.views import View
 import datetime
 
+from rest_framework.response import Response
+from rest_framework.views import APIView
+
 from rest.models import UserInfo
 
 
@@ -41,3 +44,10 @@ class Page2View(View):
         # UserInfo.objects.filter(pk=data['id']).delete()
         # return Response('data delete', status=
         pass
+
+
+class UserDataCreateView(APIView):
+
+    def post(self, request):
+        response, status = UserInfo.objects.user_data_create(request.data)
+        return Response(response, status=status)

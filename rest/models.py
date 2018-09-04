@@ -28,6 +28,9 @@ class UserInfoManager(models.Manager):
         status_code = 201
         return msg, status_code
 
+    def test(self):
+        pass
+
     # Create your models here.
 
 

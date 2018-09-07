@@ -54,6 +54,7 @@ class UserInfoManager(models.Manager):
             'bio',
             'time'
         )
+
     def data_delete(self, request_user):
         delete_obj = self.filter(user=request_user)
         delete_obj.delete()

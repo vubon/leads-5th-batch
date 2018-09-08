@@ -75,7 +75,7 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-
+.env
 
 ### PyCharm+all ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm

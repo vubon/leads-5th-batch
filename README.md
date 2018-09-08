@@ -68,7 +68,7 @@ Step- 6: Now login your heroku account and you will get your app name in dashboa
          and insert your DB name, DB password , DB username, DB host, DB port in your .env file . 
          
 
-Final step - 7: Now run below command .
+step - 7: Now run below command .
 
 ```bash
 git push heroku master
@@ -78,4 +78,18 @@ If you want to push master branch or you can choose any branch
 If everything is fine . You will get your web link and you can drive :) 
 
 [N.B. let me know if you face any problem. Thanks]
+
+Step -8: If you want to migrate, create new app etc you may use Heroku bash for this type commands . For accessing bash you need to run below command 
+
+```bash
+heroku run bash 
+```
+You will access your app root directory. Now you can run Django command lines . Such as 
+```bash
+python manage.py migrate 
+python manage.py createsuperuser
+.....
+```
+
+
 
